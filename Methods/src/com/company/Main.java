@@ -22,7 +22,7 @@ public class Main {
                 method2("ABCDE", 25);
                 break;
             case 3:
-                int summation = method3(5,5);
+                int summation = method3(5, 5);
                 System.out.println(summation);
                 break;
             case 4:
@@ -32,7 +32,6 @@ public class Main {
 
                 validationWithAge(age);
                 break;
-
             default:
                 System.out.println("Wrong input!");
         }
@@ -53,10 +52,10 @@ public class Main {
         return a + b;
     }
 
-    static void validationWithAge(int age){
-        if(age<18){
+    static void validationWithAge(int age) {
+        if (age < 18) {
             System.out.println("Access denied! You are not old enough!");
-        }else {
+        } else {
             System.out.println("Access granted!");
         }
     }
