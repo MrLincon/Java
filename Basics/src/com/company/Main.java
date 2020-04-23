@@ -16,44 +16,52 @@ public class Main {
                 "6. For Each \n" +
                 "7. While Loop \n" +
                 "8. Do While \n" +
-                "9. Array");
+                "9. Array\n" +
+                "\nExit: 0");
 
-        System.out.println("");
 
         Scanner userChoice = new Scanner(System.in);
-        System.out.println("Enter choice: ");
-        int choice = userChoice.nextInt();
+        int choice = 101;
 
-        switch (choice) {
-            case 1:
-                print();
-                break;
-            case 2:
-                variables();
-                break;
-            case 3:
-                ifElse();
-                break;
-            case 4:
-                switchCase();
-                break;
-            case 5:
-                forLoop();
-                break;
-            case 6:
-                forEach();
-                break;
-            case 7:
-                whileLoop();
-                break;
-            case 8:
-                doWhileLoop();
-                break;
-            case 9:
-                arrays();
-                break;
-            default:
-                System.out.println("Invalid input!");
+        while (choice != 0) {
+            System.out.print("\nEnter choice: ");
+            choice = userChoice.nextInt();
+
+            switch (choice) {
+                case 1:
+                    print();
+                    break;
+                case 2:
+                    variables();
+                    break;
+                case 3:
+                    ifElse();
+                    break;
+                case 4:
+                    switchCase();
+                    break;
+                case 5:
+                    forLoop();
+                    break;
+                case 6:
+                    forEach();
+                    break;
+                case 7:
+                    whileLoop();
+                    break;
+                case 8:
+                    doWhileLoop();
+                    break;
+                case 9:
+                    arrays();
+                    break;
+                default:
+                    if (choice==0){
+                        System.out.println("\nExit!");
+                    }else {
+                        System.out.println("Wrong input!");
+                    }
+            }
         }
     }
 
@@ -84,7 +92,7 @@ public class Main {
 
     static void ifElse() {
         Scanner userInput = new Scanner(System.in);
-        System.out.println("Enter a number: ");
+        System.out.print("Enter a number: ");
         int input = userInput.nextInt();
 
         if (input % 2 == 0) {
@@ -96,7 +104,7 @@ public class Main {
 
     static void switchCase() {
         Scanner userInput = new Scanner(System.in);
-        System.out.println("Enter a month: ");
+        System.out.print("Enter a month: ");
         int input = userInput.nextInt();
 
         switch (input) {
